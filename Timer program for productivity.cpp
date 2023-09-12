@@ -1,4 +1,15 @@
-//Doesn't work yet?
+/* 
+Doesn't work yet, trying to make it so that it goes to that website when it's done it's countdown.
+
+Ultimately i'm trying to make it a pop-out timer that you can open and close, then add inputs to how long you want it to go
+
+Right now it's a static 20 min timer that'll run 
+
+slowly working on it
+
+
+no inline comments because im a bastard that just ripped it from the internet 
+*/
 
 #include <iomanip>
 #include <iostream>
