@@ -24,6 +24,10 @@ int main()
 
         time_left = timer_duration - (std::chrono::steady_clock::now() - start);
     }
+    /*
+    So trying to get it so when the timer finishes, it opens up this link. 
     ShellExecute(NULL, "open", "https://www.youtube.com/watch?v=v9XyIGXcRck&ab_channel=Lofiboostyourmood", NULL, NULL, SW_SHOWNORMAL);
+    */
+    
     std::cout << "Done\n";
 }
