@@ -1,25 +1,38 @@
 /* 
-Doesn't work yet, trying to make it so that it goes to that website when it's done it's countdown.
+Using just the windows API. no fancy shmancy frameworks...that'll come later once I know how to code
+-----Ultimately i'm trying to make it a pop-out timer that you can open and close, then add inputs to how long you want it to go
 
-Ultimately i'm trying to make it a pop-out timer that you can open and close, then add inputs to how long you want it to go
-
-Right now it's a static 20 min timer that'll run 
+Right now it's a static  min timer that'll run
 
 slowly working on it
-
 
 no inline comments because im a bastard that just ripped it from the internet 
 */
 
+#include <Windows.h>
 #include <iomanip>
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include <string>
+#include <ShellAPI.h>
 
 using namespace std::chrono_literals;
 
+/*
+
+// Function to open a web page
+void OpenWebPage(const std::string& url) {
+    ShellExecuteA(nullptr, "open", url.c_str(), nullptr, nullptr, SW_SHOWNORMAL);
+*/
+
 int main()
 {
+    
+    /*   
+    std::string webpageURL = "https://www.youtube.com/watch?v=6H-PLF2CR18&ab_channel=LOFIKEEPYOUSAFE"; // Replace with your desired URL
+    */
+    
     const auto timer_duration = 20min;
     const auto start = std::chrono::steady_clock::now();
 
@@ -37,10 +50,5 @@ int main()
 
         time_left = timer_duration - (std::chrono::steady_clock::now() - start);
     }
-    /*
-    So trying to get it so when the timer finishes, it opens up this link. 
-    ShellExecute(NULL, "open", "https://www.youtube.com/watch?v=v9XyIGXcRck&ab_channel=Lofiboostyourmood", NULL, NULL, SW_SHOWNORMAL);
-    */
-    
     std::cout << "Done\n";
 }
